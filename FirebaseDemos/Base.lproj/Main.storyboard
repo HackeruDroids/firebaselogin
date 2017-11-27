@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Bodoni72.ttc">
+            <string>BodoniSvtyTwoITCTT-Bold</string>
+            <string>BodoniSvtyTwoITCTT-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Anonymous Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AnonymousLoginViewController" customModule="FirebaseDemos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fire Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cue-b7-ZJm">
+                                <rect key="frame" x="98.5" y="20" width="178.5" height="50.5"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="42"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vfx-Jg-kSK">
+                                <rect key="frame" x="98.5" y="274.5" width="178.5" height="118"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3sA-iT-jQO">
+                                        <rect key="frame" x="0.0" y="0.0" width="178.5" height="49"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JC-J4-I4y">
+                                        <rect key="frame" x="0.0" y="69" width="178.5" height="49"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="30"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="0.0" green="0.77200048580000002" blue="0.40631403030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OT3-Vm-Jel"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MVt-9b-Ihc">
+                                <rect key="frame" x="169" y="78.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.77200048575129532" blue="0.40631403030172963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MVt-9b-Ihc" firstAttribute="top" secondItem="cue-b7-ZJm" secondAttribute="bottom" constant="8" id="1Cu-Uw-19v"/>
+                            <constraint firstItem="vfx-Jg-kSK" firstAttribute="width" secondItem="cue-b7-ZJm" secondAttribute="width" id="FvY-mi-Rr6"/>
+                            <constraint firstItem="vfx-Jg-kSK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WWX-fQ-A96"/>
+                            <constraint firstItem="vfx-Jg-kSK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="arP-Dq-rZ4"/>
+                            <constraint firstItem="cue-b7-ZJm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ird-ZL-wX9"/>
+                            <constraint firstItem="MVt-9b-Ihc" firstAttribute="centerX" secondItem="cue-b7-ZJm" secondAttribute="centerX" id="lIF-Xi-vVn"/>
+                            <constraint firstItem="cue-b7-ZJm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wWK-HV-BnZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="MVt-9b-Ihc" id="ek2-J1-vwg"/>
+                        <outlet property="name" destination="3sA-iT-jQO" id="F8o-Yj-vH1"/>
+                        <segue destination="xnf-65-RYr" kind="show" identifier="loggedIn" id="gZH-lc-lC7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="118"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="A77-0S-hWA">
+            <objects>
+                <viewController id="t7o-8v-42f" customClass="MainViewController" customModule="FirebaseDemos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FSF-7p-E7s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="30R-9S-Wih"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MqE-mO-p9n">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-exit_sign_filled" id="frW-Nq-ztW">
+                            <connections>
+                                <action selector="signOut:" destination="t7o-8v-42f" id="itp-gd-YOd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LJ6-0j-XVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="860"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mjg-cH-fi0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xnf-65-RYr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="loC-zI-o5A">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="t7o-8v-42f" kind="relationship" relationship="rootViewController" id="ryJ-wc-a8p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mr4-X5-3ff" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="861"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-exit_sign_filled" width="25" height="25"/>
+    </resources>
+</document>
